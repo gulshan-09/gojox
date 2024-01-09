@@ -31,7 +31,7 @@ exports.datapost = async (req, res) => {
 
 exports.getData = async (req, res) => {
     try {
-        const maxLimit = 5;
+        const maxLimit = 20;
         const { page = 1, limit = 20 } = req.query;
         const limitedLimit = Math.min(parseInt(limit), maxLimit);
         const skip = (page - 1) * limitedLimit;
